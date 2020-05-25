@@ -1,0 +1,19 @@
+---
+image: gcr.io/prysmaticlabs/prysm/beacon-chain
+imageTag: latest
+
+config:
+  datadir: /host
+  p2p-host-ip: 
+  p2p-tcp-port: 13000
+  log-file: /host/beacon.log
+  verbosity: trace
+
+storage:
+  capacity: "20Gi"
+
+resources:
+  limits:
+    memory: "4Gi"
+  requests:
+    memory: "4Gi"
