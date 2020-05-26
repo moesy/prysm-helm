@@ -55,7 +55,8 @@ spec:
         - name: beacon-client
           image: "{{ .Values.image }}:{{ .Values.imageTag | default "latest" }}"
           {{- if .Values.config }}
-          args: ["--config-file","/data/config/beacon-client.yaml"]
+          args:
+{{ toYaml .Values.containerArgs | indent 12 }}
           {{- end }}
           resources: 
 {{ toYaml .Values.resources | indent 12 }}

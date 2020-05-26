@@ -2,6 +2,10 @@
 image: gcr.io/prysmaticlabs/prysm/beacon-chain
 imageTag: latest
 
+containerArgs:
+  - "--config-file"
+  - "/data/config/beacon-client.yaml"
+
 config:
   datadir: ./data
   p2p-host-ip: 
