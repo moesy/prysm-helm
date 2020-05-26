@@ -13,4 +13,4 @@ spec:
   capacity:
     storage: {{ .Values.storage.capacity | quote }}
   hostPath:
-    path: /host
+    path: /data
