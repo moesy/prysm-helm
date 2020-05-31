@@ -2,6 +2,8 @@
 image: gcr.io/prysmaticlabs/prysm/validator
 imageTag: latest
 
+replicas: 1
+
 config:
   datadir: /data/
   p2p-host-ip: 
@@ -11,10 +13,10 @@ config:
   verbosity: debug
 
 storage:
-  capacity: "20Gi"
+  capacity: "1Gi"
 
 resources:
   limits:
-    memory: "2Gi"
+    memory: "1Gi"
   requests:
-    memory: "2Gi"
+    memory: "1Gi"

@@ -2,6 +2,8 @@
 image: gcr.io/prysmaticlabs/prysm/beacon-chain
 imageTag: latest
 
+replicas: 1
+
 containerArgs:
   - "--config-file"
   - "/data/config/beacon-client.yaml"
@@ -18,6 +20,6 @@ storage:
 
 resources:
   limits:
-    memory: "4Gi"
+    memory: "8Gi"
   requests:
     memory: "4Gi"

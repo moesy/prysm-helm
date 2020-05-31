@@ -45,7 +45,7 @@ spec:
     matchLabels:
       app: beacon-client
   serviceName: beacon-client
-  replicas: 1
+  replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
@@ -54,7 +54,7 @@ spec:
       containers:
         - name: beacon-client
           image: "{{ .Values.image }}:{{ .Values.imageTag | default "latest" }}"
-          {{- if .Values.config }}
+          {{- if .Values.containerArgs }}
           args:
 {{ toYaml .Values.containerArgs | indent 12 }}
           {{- end }}

@@ -42,7 +42,7 @@ spec:
     matchLabels:
       app: validator
   serviceName: validator
-  replicas: 1
+  replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
@@ -63,14 +63,6 @@ spec:
               port: {{ (index .Values "config" "monitoring-port") | default 8080 }}
             initialDelaySeconds: 60
             periodSeconds: 60
-            timeoutSeconds: 5
-          readinessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /healthz
-              port: {{ (index .Values "config" "monitoring-port") | default 8080 }}
-            initialDelaySeconds: 20
-            periodSeconds: 10
             timeoutSeconds: 5
           volumeMounts:
             - name: validator-data-storage
