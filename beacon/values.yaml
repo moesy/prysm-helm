@@ -10,10 +10,9 @@ containerArgs:
 
 config:
   datadir: ./data
-  p2p-host-ip: 
   p2p-tcp-port: 13000
   log-file: /data/beacon.log
-  verbosity:
+  verbosity: info
 
 storage:
   capacity: "20Gi"
