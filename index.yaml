@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  beacon:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-01-17T18:51:41.282898405-10:00"
+    description: A Helm chart for the Prysmatic Beacon Chain Client
+    digest: f5083ba8399501e0935c721a8df99e3045456ebd341ed5d9f1d8bf5b700325d6
+    name: beacon
+    type: application
+    urls:
+    - https://moesy.github.io/prysm-helm/beacon-0.1.0.tgz
+    version: 0.1.0
+  validator:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-01-17T18:51:41.283330813-10:00"
+    description: A Helm chart for the Prysmatic Validator Client
+    digest: 8b0cc31028c0a289cab0c0836e0b1dfed9684758a75b08e5f6ab350b88735332
+    name: validator
+    type: application
+    urls:
+    - https://moesy.github.io/prysm-helm/validator-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-01-17T18:51:41.282188132-10:00"
