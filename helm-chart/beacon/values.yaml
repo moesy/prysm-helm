@@ -16,6 +16,7 @@ config:
 
 storage:
   capacity: "20Gi"
+  class: "manual"
 
 resources:
   limits:

@@ -7,7 +7,7 @@ metadata:
   annotations:
     "helm.sh/resource-policy": keep
 spec:
-  storageClassName: manual
+  storageClassName: {{ .Values.storage.class | quote }}
   accessModes:
     - ReadWriteOnce
   capacity:
